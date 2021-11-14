@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <title> Adding courses </title>
+    <link rel="stylesheet" href="./dom.css">
+    <script src="./dom.js" defer></script>
+  </head>
+  <body>
+      <div class="backdrop"></div>
+      <div class="modal" id="add-modal">
+        <div class="modal-content">
+       <label for="title"> course Title </label>
+        <input type="text" name="title" id="title">
+        <label for="image-url"> Image URL </label>
+        <input type="text" name="image-url" id="image-url">
+        <label for="rating"> Your Rating </label>
+        <input
+         type="number"
+         step="1"
+         max="5"
+         min="1"
+         name="rating"
+         id="rating"
+         >
+        </div>
+        <div class="modal-actions">
+           <button class="btn btn-passive"> Cancel </button>
+           <button class="btn btn-success"> Add </button>
+        </div>
+      </div>
+
+      <div class="modal" id="delete-modal">
+         <h2 class="modal-title"> Are you sure? </h2>
+         <p class="modal-content">
+           Are you sure want to delete this item? This action can't be made.
+         </p>
+         <div class="modal-actions">
+            <button class="btn btn-passive"> No (Cancel) </button>
+            <button class="btn btn-danger"> Yes </button>
+         </div> 
+      </div>
+
+      <header>
+        <h1> Web Courses </h1>
+        <button class="btn"> ADD COURSES </button>
+      </header>
+      <main>
+        <section id="entry-text" class="card">
+          <p> Your Favorite Courses </p>
+        </section>
+        <ul class="course-list">
+           <li id="list-652314">
+             <img src="../img.DOM/js,jpg.png" alt="js" width="150">
+              <div class="course-info">
+               <h2> Advance JavaScript </h2>
+               <p> 5 / 5 stars </p>
+             </div>
+             <span class="close"> &times; </span>
+           </li>
+        </ul>
+      </main>
+  </body>
+</html>
